@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Pollo Loco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icons/iconPepe.png">
+    <script src="models/drawable-objects.class.js"></script>
+    <script src="models/movabel-objects.class.js"></script>
+    <script src="models/charachter.class.js"></script>
+    <script src="models/throwabl-objects.class.js"></script>
+    <script src="models/cloud.class.js"></script>
+    <script src="models/chicken.class.js"></script>
+    <script src="models/chicks.class.js"></script>
+    <script src="models/health-bar.class.js"></script>
+    <script src="models/bottleBar.class.js"></script>
+    <script src="models/endboss-StatusBar.class.js"></script>
+    <script src="models/coinBar.class.js"></script>
+    <script src="models/endBoss.class.js"></script>
+    <script src="models/outroScreen.class.js"></script>
+    <script src="models/world.class.js"></script>
+    <script src="models/backgroundObject.class.js"></script>
+    <script src="models/warning-sign.class.js"></script>
+    <script src="models/skeleton.class.js"></script>
+    <script src="models/skull.class.js"></script>
+    <script src="models/keyboard.class.js"></script>
+    <script src="models/level.class.js"></script>
+    <script src="models/coins.class.js"></script>
+    <script src="models/bottles.class.js"></script>
+    <script src="models/landmine.class.js"></script>
+    <script src="models/firstAid.class.js"></script>
+    <script src="js/game.js"></script>
+    <script src="levels/level1.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="introScreen" id="introScreen">
+            <div class="buttons">
+                <button class="playButton" onclick="init()">Play</button>
+                <button class="intro" onclick="openInfo()">
+                    <img src="img/icons/introIcon.png" alt="">
+                </button>
+            </div>
+            <div class="control">
+                <div class="key">
+                    <span>Move left</span>
+                    <img class="controlimg" src="img\icons\arrow-102-24.png">
+                </div>
+                <div class="key">
+                    <span> Move right</span>
+                    <img class="controlimg" src="img/icons/arrow-37-24.png">
+                </div>
+                <div class="key">
+                    <span> Throw bottle</span>
+                    <img class="controlimg" src="img/icons/letter-d-24.png">
+                </div>
+                <div class="key">
+                    <span> Jump</span>
+                    <img class="spacecontrolimg" src="img/icons/myspace-3-24.png">
+                </div>
+            </div>
+        </div>
+        <div id="descriptionContainer" class="overlap d-none" onclick="closeInfo()">
+            <div onclick="doNotCloseInfo(event)" id="gameInfo" class="gameInfo">
+                <span>
+                    Deep in the mexican desert there was an invasion of mutant crazy chicken, wich terrified and evicted
+                    the
+                    residents. Help Pepe to liberate his country from those chicken and eliminate the big laying hen.
+                    Dont't let it escape and be careful, even the cute chicks are evil! <br>
+                    <span class="notice">if you get hurt you need
+                        <div class="iconsIntro">
+                            <img class="introCoin" src="img/8_coin/introCoin.png">
+                            <img class="introCoin" src="img/8_coin/introCoin.png">
+                        </div>to get the medicine.
+                    </span>
+                </span>
+                <!-- <button onclick="closeInfo()">x</button> -->
+            </div>
+        </div>
+    </div>
+    <div class="playGame d-none" id="playGame">
+        <canvas height="480" width="780" id="canvas"></canvas>
+        <img src="img/icons/fullscreen-12-24.png" alt="" id="fullscreen" class="fullscreen" onclick="fullscreen()">
+
+        <div id="touchScreen" class="touchScreenKey d-none">
+            <div class="panel">
+                <button onclick="console.log('klick')">
+                    <img src="img/icons/arrow-102-24.png" id="left">
+                </button>
+                <button>
+                    <img src="img/icons/arrow-37-24.png" id="right">
+                </button>
+            </div>
+            <div class="panel">
+                <button>
+                    <img src="img/icons/jump-touch.png" id="space">
+                </button>
+                <button>
+                    <img class="throw-touch" src="img/icons/throw-touch.png" id="throw">
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="showRotateTxt" id="showRotateTxt">
+        <span>Please rotate your device</span>
+    </div>
+</body>
+
+</html>

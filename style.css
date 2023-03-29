@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'zabras';
+    src:
+        url('fonts/Zabars.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    background-image: url(img/9_intro_outro_screens/start/bodyBackground.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.buttonOnTouch {
+    background-color: #FFDC04;
+}
+
+.showRotateTxt{
+    font-size: 20px;
+    padding-top: 13px;
+    color: azure;
+
+}
+
+
+.touchScreenKey {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 60px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+
+canvas {
+    background-image: url('./img/9_intro_outro_screens/start/bodyBackground.jpg');
+    background-size: cover;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.fullscreen {
+    height: 35px;
+    margin: 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.playGame {
+    position: relative;
+}
+
+.introScreen {
+    background-image: url(img/9_intro_outro_screens/start/startscreen_1.png);
+    background-size: 100% 100%;
+    width: 780px;
+    height: 480px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.playButton {
+    height: 50px;
+    width: 75px;
+    font-size: 36px;
+    font-weight: bold;
+    /* //font-family: 'Creepster', cursive; */
+}
+
+.buttons {
+    cursor: pointer;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+}
+
+.control {
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.overlap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 1, 0.1);
+    transition: all .4s ease-in-out;
+}
+
+.container {
+    position: relative;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+}
+
+.key img {
+    padding-left: 10px;
+}
+
+.gameInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #b76609;
+    box-shadow: 0px 0px 8px 0px #795d19;
+    margin: 10px;
+    text-align: center;
+    border-radius: 14px;
+    padding: 15px;
+    width: 40%;
+    background-image: radial-gradient(rgb(229 203 0), rgb(229 158 0), orange);
+    transition: all .4s ease-in-out;
+    color: #8a3415;
+    font-weight: bold;
+}
+
+.gameInfo button:hover {
+    transform: scale(1.1);
+}
+
+.intro {
+    height: 22px;
+    background: none;
+    border: none;
+}
+
+.notice {
+    font-size: 12px;
+}
+
+.iconsIntro {
+    display: flex;
+    justify-content: center;
+}
+
+.notice img {
+    height: 19px;
+}
+
+.gameInfo button {
+    width: 11%;
+    border: none;
+    background: unset;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.playButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #9a3a17;
+    background-image: radial-gradient(rgb(255 204 25), rgb(255 206 22), #ffa600);
+    border-radius: 25px;
+    box-shadow: 0px 0px 6px 0px #6c6c6c;
+    border: none;
+    cursor: pointer;
+    font-family: 'zabras', Arial, Helvetica, sans-serif;
+    transition: all .3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.playButton:hover {
+    background-color: rgb(201, 159, 9);
+    transform: scale(1.1);
+}
+
+.intro:hover {
+    transform: scale(1.1);
+}
+
+.touchScreenKey button {
+    background: none;
+    border: none;
+}
+
+.throw-touch {
+    transform: rotate(148deg);
+    height: 30px;
+    width: 33px;
+}
+
+#right,
+#left {
+    height: 25px;
+}
+
+#space {
+    height: 29px;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    width: 14%;
+}
+
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+    .touchScreenKey {
+        display: flex !important;
+    }
+}
+
+/* stylus-based screens */
+@media (hover: none) and (pointer: fine) {
+    .touchScreenKey {
+        display: flex !important;
+    }
+}
+
+/* Nintendo Wii controller, Microsoft Kinect */
+@media (hover: hover) and (pointer: coarse) {
+    .touchScreenKey {
+        display: flex !important;
+    }
+}
+
+
+@media only screen and (max-width: 780px) {
+    canvas,
+    .introScreen {
+        width: 100vw;
+    }
+
+    .fullscreen {
+        height: 25px;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    canvas,
+    .introScreen {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 620px) {
+    .control {
+        width: 90%;
+        font-size: 13px;
+    }
+
+    .key img {
+        height: 18px;
+        padding-left: 3px;
+    }
+}
+
+@media (max-width: 280px) {
+    .key img {
+        height: 12px;
+    }
+
+    .control {
+        width: 95%;
+        font-size: 11px;
+    }
+
+}
+
+
+@media (max-width: 520px){
+    #fullscreen{
+        display: none;
+    }
+}
+    
+
+@media (orientation: portrait) {
+    /* Styles for portrait orientation */
+    #showRotateTxt {
+      display: flex;
+    }
+  }
+  @media (orientation: landscape) {
+    /* Styles for landscape orientation */
+    #showRotateTxt {
+        display: none;
+      }
+    }
